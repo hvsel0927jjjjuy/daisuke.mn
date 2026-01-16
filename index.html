@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daisuke.mn - Standoff 2 Gold</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME -->
+<div id="home">
+  <img src="images/standoff.png" id="standoffImg" alt="Standoff 2">
+  <h1>Standoff 2 Gold</h1>
+  <p>Зураг дээр дарж Gold shop руу орно</p>
+</div>
+
+<!-- SHOP -->
+<div id="shop">
+  <h2>Gold тарифаар</h2>
+  <div class="gold-list">
+    <button class="gold-btn" data-price="4000">100 Gold</button>
+    <button class="gold-btn" data-price="8000">200 Gold</button>
+    <button class="gold-btn" data-price="15000">500 Gold</button>
+    <button class="gold-btn" data-price="28000">1000 Gold</button>
+    <button class="gold-btn" data-price="40000">1500 Gold</button>
+    <button class="gold-btn" data-price="55000">2000 Gold</button>
+    <button class="gold-btn" data-price="80000">3000 Gold</button>
+  </div>
+  <div id="price">Үнэ: 0₮</div>
+  <button id="buy">Gold авах</button>
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+  <div class="popup-box">
+    <div class="close" onclick="closePopup()">✖</div>
+    <h3>MonPay төлбөр</h3>
+    <div class="qr-container">
+      <div class="account-box" onclick="copyAccount()">MonPay данс: 80166216 | IBAN: MN140050099106107579</div>
+      <img src="images/monpay-qr.jpg" alt="MonPay QR">
+    </div>
+    <div id="upload-section">
+      <h4>Төлбөрөө хийсэн бол энд screenshot оруулна уу</h4>
+      <button id="upload-button">Upload screenshot / image</button>
+      <input type="file" id="fileInput" accept="image/*" style="display:none;">
+      <div id="preview"></div>
+    </div>
+    <p style="margin-top:10px; font-weight:bold;">Daisuke.mn</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
