@@ -1,0 +1,185 @@
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:white;
+  text-align:center;
+  background:url('images/daisuke-bg.jpg') no-repeat center center fixed;
+  background-size:cover;
+}
+
+/* HOME */
+#home{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,0.4);
+}
+#standoffImg{
+  width:45%;
+  max-width:250px;
+  border-radius:20px;
+  box-shadow:0 0 20px black;
+  cursor:pointer;
+  transition:0.3s;
+}
+#standoffImg:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 35px #00f;
+}
+#home h1{
+  font-size:5vw;
+  margin-top:20px;
+  text-shadow:0 0 15px #00f;
+}
+#home p{
+  font-size:3.5vw;
+}
+
+/* SHOP */
+#shop{
+  display:none;
+  padding:20px;
+  background:rgba(0,0,0,0.6);
+  min-height:100vh;
+}
+#shop h2{
+  font-size:6vw;
+  margin-bottom:20px;
+  color:#00f;
+  text-shadow:0 0 10px #00f;
+}
+.gold-list{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:3vw;
+  margin:20px 0;
+}
+.gold-btn{
+  padding:12px 20px;
+  background:#111827;
+  border:none;
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+  box-shadow:0 0 5px #000;
+  font-size:4vw;
+}
+.gold-btn:hover{
+  background:#2563ff;
+  box-shadow:0 0 15px #2563ff, 0 0 25px #00ffff;
+  transform:translateY(-3px);
+}
+.gold-btn.active{
+  background:#2563ff;
+  box-shadow:0 0 15px #2563ff, 0 0 25px #00ffff;
+}
+#price{
+  font-size:4vw;
+  margin:15px 0;
+}
+#buy{
+  padding:12px 30px;
+  background:#2563ff;
+  border:none;
+  border-radius:10px;
+  font-size:4vw;
+  cursor:pointer;
+  font-weight:bold;
+  color:white;
+  transition:0.3s;
+}
+#buy:hover{
+  background:#00f;
+  box-shadow:0 0 20px #00f, 0 0 40px #0ff;
+}
+
+/* POPUP */
+#popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  z-index:1000;
+}
+.popup-box{
+  background:#020617;
+  width:90%;
+  max-width:400px;
+  margin:10vh auto;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  position:relative;
+}
+.popup-box .close{
+  position:absolute;
+  top:10px;
+  right:10px;
+  cursor:pointer;
+  font-size:20px;
+}
+.qr-container{
+  position:relative;
+  display:inline-block;
+  margin-top:20px;
+}
+.account-box{
+  background:#111;
+  color:#0ff;
+  font-weight:bold;
+  padding:10px 15px;
+  border-radius:10px;
+  box-shadow:0 0 10px #0ff;
+  cursor:pointer;
+  margin-bottom:10px;
+}
+.account-box:hover{
+  box-shadow:0 0 25px #0ff, 0 0 40px #00ffff;
+  transform:translateY(-2px);
+}
+.qr-container img{
+  width:80%;
+  max-width:250px;
+  border-radius:10px;
+  box-shadow:0 0 10px #0ff;
+}
+#upload-section{
+  display:none;
+  margin-top:20px;
+  background:#111; 
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 0 20px #0ff;
+}
+#upload-button{
+  background:#111; 
+  color:#0ff;
+  padding:10px 15px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+  box-shadow:0 0 10px #0ff;
+}
+#preview img{
+  width:80%;
+  max-width:200px;
+  border-radius:10px;
+  box-shadow:0 0 20px #0ff, 0 0 40px #00ffff;
+  margin-top:10px;
+}
+
+/* Responsive text */
+@media(max-width:600px){
+  #home h1{font-size:8vw;}
+  #home p{font-size:5vw;}
+  #shop h2{font-size:8vw;}
+  .gold-btn{font-size:5vw;}
+  #price{font-size:5vw;}
+  #buy{font-size:5vw;}
+}
